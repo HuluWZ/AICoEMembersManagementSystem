@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Raleway&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap");
 
 :root {
   --dark: #2b2d42;
@@ -15,7 +15,7 @@
 
 a {
   text-decoration: none;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .container {
@@ -66,14 +66,14 @@ a {
 }
 
 #header nav {
-  background-color: azure;
+  background-color: #06d6a0;
   padding: 1em 0;
   width: 100%;
 }
 
 #site-main {
   margin-top: 6em;
-  font-family: "Raleway", sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 #site-main .container .box-nav > a {
@@ -105,7 +105,7 @@ table {
 }
 
 .table tr:hover {
-  background-color: bisque;
+  background-color: #06d6a0;
 }
 
 .table tr:hover td > a {
@@ -118,7 +118,7 @@ table {
   border-color: #32383e;
 }
 
-@media only screen and(max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   table,
   thead,
   tbody,
@@ -127,60 +127,65 @@ table {
   tr {
     display: block;
   }
+
   thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
   }
+
   tr {
     border: 1px solid var(--border);
   }
+
   td {
     border: none;
     position: relative;
   }
 }
-/*add and update user*/
+
+/*  add user & update user template */
 .form-title {
   margin-top: 2em;
 }
 
 .form-title > h2 {
-  padding: 0.5em 0new;
+  padding: 0.5em 0;
 }
 
-.newUser {
+.new_user {
   max-width: 786px;
   margin: auto;
 }
 
-#updateUser .form-group,
-#addUser .form-group {
-  margin: 4em 0;
+#update_user .form-group,
+#add_user .form-group {
+  margin: 0.4em 0;
 }
 
-#updateUser .form-group input[type="text"],
-#addUser .form-group input[type="text"] {
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"] {
   width: 100%;
   padding: 0.6em 1em;
   margin: 0.5em 0;
   border: 1px solid var(--border);
-  font-family: "Raleway", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 1em;
-  border-radius: 2em;
+  border-radius: 0.2em;
 }
 
-#updateUser .form-group .radio,
-#addUser .form-group .radio {
+#update_user .form-group .radio,
+#add_user .form-group .radio {
   margin: 1em 2em;
 }
-/*adding style to radio buttons*/
+
+/* adding style to radio buttons */
 .radio input[type="radio"] {
   position: absolute;
   opacity: 0;
 }
 
-.radio input[type="radio"] + .radio-lable::before {
+.radio input[type="radio"] + .radio-label:before {
   content: "";
   background: var(--border-btn);
   border-radius: 100%;
@@ -198,26 +203,37 @@ table {
   transition: all 250ms ease;
 }
 
-.radio input[type="radio"]:checked + .radio-lable::before {
-  background-color: #adb5bd;
+.radio input[type="radio"]:checked + .radio-label:before {
+  background-color: #16db93;
   box-shadow: inset 0 0 0 4px #e9ecef;
 }
 
-.radio input[type="radio"]:focus + .radio-lable::before {
+.radio input[type="radio"]:focus + .radio-label:before {
   outline: none;
-  border-color: #16db55;
+  border-color: #16db93;
 }
 
-.radio input[type="radio"]:disabled + .radio-lable::before {
+.radio input[type="radio"]:disabled + .radio-label:before {
   box-shadow: inset 0 0 0 4px #e9ecef;
   border-color: #b4b4b4;
   background: #b4b4b4;
 }
 
-#updateUser.form-group .btn,
-#addUser.form-group .btn {
+#update_user .form-group .btn,
+#add_user .form-group .btn {
   width: 100%;
   padding: 0.9em 1em;
-  background-color: #16db55;
+  background-color: #16db93;
   border: none;
+  font-family: "PT Sans", sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 0.2em;
+  margin: 0.5em 0;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover {
+  background-color: var(--dark);
+  color: var(--border);
 }
