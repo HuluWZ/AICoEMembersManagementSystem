@@ -34,5 +34,5 @@ app.get("/", (req, res) => {
 // load routers
 app.use("/", require("./server/routes/router"));
 app.listen(PORT, () => {
-  console.log("The Server is Running on http://localhost:${PORT}");
+  console.log(`The Server :rocket is Running on http://localhost:${PORT}`);
 });
